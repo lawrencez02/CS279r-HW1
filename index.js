@@ -22,7 +22,7 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
     // Log that app has connected to database
     console.log("Connected to database!");
     // Only run app after connection to MongoDB has been established
-    app.listen(3000, () => console.log("Server up and running!"));
+    app.listen(process.env.PORT, () => console.log("Server up and running!"));
 });
 
 // Set view engine configuration for app
