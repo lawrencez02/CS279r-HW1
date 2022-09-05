@@ -1,0 +1,136 @@
+/* Default styling for all components on webpage */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Change background color of webpage */
+body {
+    background:deepskyblue;
+}
+
+/* Styling for body div of webpage */
+.todo-container {
+    color: white;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    padding: 20px;
+    width: 600px;
+    transform: translate(-50%,-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for div that houses input form and to-do list */
+.todo {
+    width: 400px;
+}
+
+/* Styling for "To-do List" title */
+.todo-container h2 {
+    padding: 10px;
+    font-family: 'Candal', sans-serif;
+    font-size: 2em;
+}
+
+/* Styling for input text field for adding a to-do task */
+.todo-header input {
+    width: 92%;
+    border: none;
+    border-radius: 5px;
+    height: 20px;
+    font-family: 'Candal', sans-serif;
+}
+
+/* Styling for submit button in input form */
+.todo-header button {
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+    font-family: 'Candal', sans-serif;
+    background-color: rgb(51, 212, 100);
+}
+
+/* Remove default styling for list items in to-do list (HTML unordered list) */
+.todo-container ul {
+    list-style: none;
+}
+
+/* Styling for each list item in to-do list */
+.todo-list-item {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Candal', sans-serif;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+}
+
+/* Styling for edit form within each to-do list item */
+.todo-list-item form {
+    width: 100%;
+    display: flex;
+}
+
+/* Styling for input text box in edit form within each to-do list item */
+.todo-list-item input {
+    flex-grow: 2;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Candal', sans-serif;
+}
+
+/* Styling for submit button in edit form within each to-do list item */
+.todo-list-item button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    font-family: 'Candal', sans-serif;
+    background-color: rgb(51, 212, 100);
+}
+
+/* Styling for cancel button in edit form within each to-do list item */
+.todo-list-item .cancel {
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    font-family: 'Candal', sans-serif;
+    background-color: rgb(223, 43, 43);
+    margin-left: 5px;
+}
+
+/* Styling for divs used in each list item */
+.todo-list-item div {
+    flex-grow: 2;
+}
+
+/* Styling for edit button for each to-do list item */
+.todo-list-item .edit {
+    color : rgb(143, 233, 58);
+    margin-right: 10px;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+/* Styling for remove button for each to-do list item */
+.todo-list-item .remove {
+    color : rgb(243, 96, 96);
+    margin-right: 5px;
+    cursor:pointer;
+    text-decoration: none;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <!-- Title of to-do list website -->
+    <title>Todo App</title>
+    <!-- Import relevant CSS style sheets, both our own and external libraries -->
+    <link rel="stylesheet" href="/static/stylesheets/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Candal|Chewy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+    <div class="todo-container">
+        <!-- Title of the to-do list itself -->
+        <h2>To-Do List</h2>
+        <div class="todo">
+            <!-- Input form that allows users to add to-do list items by submitting a POST request -->
+            <form action="/" method="POST" class="todo-header">
+                <input type="text" name="content">
+                <!-- Submit button for the form -->
+                <button type="submit">
+                    <span class="fas fa-plus"></span>
+                </button>
+            </form>
+            <!-- HTML unordered list that is the to-do list itself -->
+            <ul class="todo-list">
+                <!-- For each task fetched from the database, generate an HTML list item -->
+                <% todoTasks.forEach(details => { %>
+                <li class="todo-list-item">
+                    <!-- Title the task with the content of the task from the database -->
+                    <div class="todo-list-item-name"><%= details.content %></div>
+                    <!-- Edit button for the task -->
+                    <a href="/edit/<%= details._id %>" class="edit">
+                        <span class="fas fa-edit"></span>
+                    </a>
+                    <!-- Remove button for the task -->
+                    <a href="/remove/<%= details._id %>" class="remove">
+                        <span class="fas fa-times"></span>
+                    </a>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+</body>
